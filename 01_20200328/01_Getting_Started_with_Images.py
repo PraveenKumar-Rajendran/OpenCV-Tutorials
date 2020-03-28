@@ -27,4 +27,4 @@ cv2.destroyAllWindows()  # closes all the windows
 
 #To save back the processed images
 
-cv2.imwrite('AudiGrey.png',img2)
+cv2.imwrite('AudiGrey.jpg',img2)  #specify the file format name if needed
