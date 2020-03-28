@@ -16,6 +16,7 @@ while(True):
     #When no key is pressed the return value of the waitkey() is found to be -1
     #So using that to break the loop
 
+    #if cv.waitKey(1) == ord('q'):
     if  cv2.waitKey(1) == -1 :  # wait for millisecond per frame and if no key is pressed continue streaming, otherwise break the loop
         pass
     else:
