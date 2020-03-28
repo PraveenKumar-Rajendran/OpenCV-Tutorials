@@ -10,13 +10,16 @@ while(True):
     ret, frame = cap.read()
 
     # Our operations on the frame come here
-    gray = cv2.cvtColor(frame, cv2.COLOR_BGR2GRAY)
-
+    gray = cv2.cvtColor(frame, cv2.COLOR_BGR2HSV)
+    cv2.imshow('frame', gray)
     # Display the resulting frame
-    cv2.imshow('frame',gray)
-    if cv2.waitKey(1) & 0xFF == ord('q'):
-        break
+    #When no key is pressed the return value of the waitkey() is found to be -1
+    #So using that to break the loop
 
+    if  cv2.waitKey(1) == -1 :  # wait for millisecond per frame and if no key is pressed continue streaming, otherwise break the loop
+        pass
+    else:
+        break
 # When everything done, release the capture
 cap.release()
 cv2.destroyAllWindows()
