@@ -27,4 +27,5 @@ font = cv2.FONT_HERSHEY_SIMPLEX
 cv2.putText(img,'Praveen!',(10,500), font, 2.5, (200,255,155), 2, cv2.LINE_AA)
 cv2.imshow('image',img)
 cv2.waitKey(0) # Wait until any key is pressed
+cv2.imwrite('RonaldoText.jpg',img)
 cv2.destroyAllWindows()
